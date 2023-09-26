@@ -20,8 +20,14 @@ public class Main {
     for (Canis c : roster) {
       c.hunt();
       c.hunt("snapping turtle");
-      c.describe();
+      if (c instanceof Dog d) {
+        d.perform();
+        Dog.describe();
+      } else if (c instanceof Wolf) {
+        Wolf.describe();
+      } else {
+        Canis.describe();
+      }
     }
   }
-
 }
